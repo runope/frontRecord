@@ -2,7 +2,7 @@
  * @Author: Runope
  * @Date: 2021-06-15 14:11:39
  * @LastEditors: Runope
- * @LastEditTime: 2021-06-15 14:58:31
+ * @LastEditTime: 2021-06-15 19:00:23
  * @Description: file content
  * @contact: runope@qq.com
  */
@@ -78,4 +78,8 @@
 
 // logName(); // "Mark"
 
-console.log(typeof(+"45"))
+// console.log(typeof(+"45"))
+console.log(a)
+var a = 1
+
+
