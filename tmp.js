@@ -2,7 +2,7 @@
  * @Author: Runope
  * @Date: 2021-06-15 14:11:39
  * @LastEditors: Runope
- * @LastEditTime: 2021-06-15 19:45:23
+ * @LastEditTime: 2021-06-17 10:39:02
  * @Description: file content
  * @contact: runope@qq.com
  */
@@ -82,7 +82,21 @@
 // console.log(17/10)
 
 
+const builds = {
+    'hello1' : {
+        entry: 'entry1',
+        dest: 'dest1',
+        format: 'format1',
+        env: 'env1',
+    },
+    'world2' : {
+        entry: 'entry2',
+        dest: 'dest2',
+        format: 'format2',
+        env: 'env2',
+    }
+}
 
-
+console.log(Object.keys(builds).map())
 
 

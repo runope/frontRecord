@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <!-- hint vue mount -->
+    <div id="app">
+        <div class="main-area">
+            <!-- restart button -->
+            <button></button>
+            <div class="game-area">
+                <!-- init cells-->
+                <div v-for="(row, m) in minesArray" class="row-cells">
+                    <div v-for="(cell, n) in row" class="cell">
+                        {{ cell }}
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+const vm = new Vue({
+      el: "#app",
+      data: {
+        isGameOver: false,
+        isFirstClick: true,
+        minesArray: '',
+        rowSize: 8,
+        colSize: 8,
+        mineSize: 9,
+        btnContent: 'emoji-smile',
+
+      },
+      methods: {
+          clickCell(row, col){}
+      },
+      mounted(){
+        //   init game
+        console.log("-------------------------")
+        console.log("init game...")
+        this.minesArray = new Array()
+
+        for(let i = 0; i < this.rowSize; i++) {
+            this.minesArray[i] = new Array()
+
+            for(let j = 0; j < this.colSize; j++) {
+                this.minesArray[i][j] = 0
+
+            }
+        }
+        console.log("init game over...")
+        console.log("-------------------------")
+      },
+      filters: {}
+  })
+</script>
+</html>
